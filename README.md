@@ -44,3 +44,6 @@ run the app:
 ```bash
 python3 wsgi.py
 ```
+---
+## Picture of app
+![image](https://github.com/karlusrex/FND/assets/90254802/875292ea-7214-46df-b1b4-833c452d4463)
