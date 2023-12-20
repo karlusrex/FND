@@ -35,6 +35,11 @@ navigate to the flask directory:
 cd flask
 ```
 
+install the requirements:
+```bash
+pip3 install -r requirements.txt
+```
+
 run the app:
 ```bash
 python3 wsgi.py
