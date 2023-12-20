@@ -1,0 +1,20 @@
+:root {
+    --background: #0C0C12;
+    --background-circle: #1e1e1e;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+body {
+    background-color: var(--background);
+    color: white;
+    background: radial-gradient(
+      circle at top center,
+      var(--background-circle) 0%, var(--background) 40%
+    );
+}

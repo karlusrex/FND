@@ -1,11 +1,15 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home page</title>
-</head>
-<body>
+{% extends "base.html" %}
+{% block title %}Home{% endblock %}
+
+{% block header %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/home.css') }}">
+{% endblock %}
+
+{% block content %}
+
+<div class="home-page">
     <h1>Flask-Nginx-Docker template</h1>
-</body>
-</html>
+    <p>This is a template for a Flask web application that is served by Nginx and Docker.</p>
+</div>
+
+{% endblock %}
