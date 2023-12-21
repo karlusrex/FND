@@ -12,12 +12,6 @@ services:
       - /usr/src/app/web/node_modules
     depends_on:
       - nginx
-    deploy:
-      resources:
-        limits:
-          memory: 2g
-        reservations:
-          memory: 1g
   flask:
     build: ./flask
     command: gunicorn -b 0.0.0.0:5000 wsgi:app
