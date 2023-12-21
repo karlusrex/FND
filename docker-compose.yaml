@@ -2,13 +2,13 @@ version: "3.8"
 services:
   web:
     build:
-      context: ./flask/web
+      context: ./web
       dockerfile: Dockerfile
     command: pnpm run dev --host
     expose:
       - 5173
     volumes:
-      - ./flask/web:/usr/src/app/web
+      - ./web:/usr/src/app/web
       - /usr/src/app/web/node_modules
     depends_on:
       - nginx
