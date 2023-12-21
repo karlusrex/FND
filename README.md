@@ -23,7 +23,7 @@ docker-compose down
 if you want to make changes to the flask app you have to rebuild the container with the following command:
 
 ```bash
-docker-compose up -d --build
+docker-compose up -d --build flask
 ```
 
 ---
