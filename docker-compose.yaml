@@ -1,5 +1,17 @@
 version: "3.8"
 services:
+  web:
+    build:
+      context: ./flask/web
+      dockerfile: Dockerfile
+    command: pnpm run dev --host
+    expose:
+      - 5173
+    volumes:
+      - ./flask/web:/usr/src/app/web  # Mount only the web directory
+      - /usr/src/app/web/node_modules  # Keep node_modules outside the host volume
+    depends_on:
+      - nginx
   flask:
     build: ./flask
     command: gunicorn -b 0.0.0.0:5000 wsgi:app
