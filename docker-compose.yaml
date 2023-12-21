@@ -8,8 +8,8 @@ services:
     expose:
       - 5173
     volumes:
-      - ./flask/web:/usr/src/app/web  # Mount only the web directory
-      - /usr/src/app/web/node_modules  # Keep node_modules outside the host volume
+      - ./flask/web:/usr/src/app/web
+      - /usr/src/app/web/node_modules
     depends_on:
       - nginx
   flask:
