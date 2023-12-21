@@ -1,10 +1,11 @@
 # FND
-Flask-Nginx-Docker template based on jinja2 and gunicorn
+Flask-Nginx-Docker template for svelte ts and vite using pnpm
 
 ---
 ## Requirements
 - Docker
-- Python  (optional for local development, see below)
+- Python (Optional for local development)
+- pnpm (Optional for local development)
 
 ---
 ## Running the app with Docker 
@@ -20,30 +21,32 @@ To stop the container, run the following command:
 docker-compose down
 ```
 
-if you want to make changes to the flask app you have to rebuild the container with the following command:
+if you want to make changes to the web or flask app you have to rebuild the container with the following command:
 
+```bash
+docker-compose up -d --build web
+```
 ```bash
 docker-compose up -d --build flask
 ```
-
 ---
-## Running the app with Flask
-To start the app, run the following command:
+## Running the web (svelte) app
+navigate to the web app:
 
-navigate to the flask directory:
 ```bash
-cd flask
+cd web
 ```
 
-install the requirements:
+run the svelte app by:
+
 ```bash
-pip3 install -r requirements.txt
+pnpm install
+pnpm run dev
 ```
 
-run the app:
-```bash
-python3 wsgi.py
-```
+the svelte application is now running on `localhost:5173` with hot reloading enabled
+
 ---
 ## Picture of app
-![image](https://github.com/karlusrex/FND/assets/90254802/875292ea-7214-46df-b1b4-833c452d4463)
+![image](https://github.com/karlusrex/FND/assets/90254802/af0facc4-2e31-4797-80b8-2bc1c6a28f76)
+
