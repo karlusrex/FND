@@ -4,22 +4,12 @@ services:
     build:
       context: ./web
       dockerfile: Dockerfile
-    command: pnpm run dev --host
-    expose:
-      - 5173
-    volumes:
-      - ./web:/usr/src/app/web
-      - /usr/src/app/web/node_modules
+    ports:
+      - "80:80"
     depends_on:
-      - nginx
+      - flask
   flask:
     build: ./flask
     command: gunicorn -b 0.0.0.0:5000 wsgi:app
     expose:
       - 5000
-  nginx:
-    build: ./nginx
-    ports:
-      - "80:80"
-    depends_on:
-      - flask
