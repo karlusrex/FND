@@ -1,5 +1,5 @@
 # FND
-Flask-Nginx-Docker template based on jinja2 and gunicorn
+Flask-Nginx-Docker template based on jinja2 and gunicorn, see svelte branch for js template
 
 ---
 ## Requirements
